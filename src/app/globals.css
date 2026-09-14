@@ -1,9 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 6, 27, 49;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
+  
+  /* Stripe-inspired colors */
+  --color-heading: #061b31;
+  --color-body: #64748d;
+  --color-label: #273951;
+  --color-border: #e5edf5;
+  --color-accent: #10b981;
+  --color-accent-hover: #059669;
+  --color-surface: #f6f9fc;
+  --color-navy: #1c1e54;
+  
+  /* Stripe-style shadows */
+  --shadow-sm: rgba(50,50,93,0.25) 0px 2px 5px -1px, rgba(0,0,0,0.1) 0px 1px 3px -1px;
+  --shadow-md: rgba(50,50,93,0.25) 0px 6px 12px -2px, rgba(0,0,0,0.1) 0px 3px 7px -3px;
+  --shadow-lg: rgba(50,50,93,0.25) 0px 13px 27px -5px, rgba(0,0,0,0.1) 0px 8px 16px -8px;
+  --shadow-xl: rgba(50,50,93,0.25) 0px 30px 60px -12px, rgba(0,0,0,0.1) 0px 18px 36px -18px;
 }
 
 html {
@@ -11,30 +27,55 @@ html {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  font-family: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--color-body);
+  font-family: var(--font-source-sans), system-ui, -apple-system, sans-serif;
+  background: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Stripe-style typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.6;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f6f9fc;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -46,11 +87,17 @@ body {
   scroll-margin-top: 80px;
 }
 
-/* Animation utilities */
+/* Stripe-style selection */
+::selection {
+  background-color: #10b981;
+  color: white;
+}
+
+/* Stripe-style animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -63,16 +110,7 @@ body {
     opacity: 1;
   }
   50% {
-    opacity: 0.5;
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
+    opacity: 0.6;
   }
 }
 
@@ -84,12 +122,56 @@ body {
   animation: pulse 3s ease-in-out infinite;
 }
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+/* Stripe-style card shadows */
+.shadow-stripe-sm {
+  box-shadow: var(--shadow-sm);
 }
 
-/* Selection color */
-::selection {
-  background-color: #10b981;
+.shadow-stripe-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-stripe-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-stripe-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+/* Stripe-style borders */
+.border-stripe {
+  border: 1px solid var(--color-border);
+}
+
+/* Stripe-style buttons */
+.btn-primary {
+  background: var(--color-accent);
   color: white;
+  font-weight: 400;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-accent);
+  font-weight: 400;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--color-border);
+  transition: all 0.15s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+  background: rgba(16, 185, 129, 0.04);
 }

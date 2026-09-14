@@ -1,34 +1,34 @@
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-300">
+    <footer className="bg-[#061b31] text-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-emerald-600 rounded-sm flex items-center justify-center">
                 <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <span className="text-lg font-bold text-white">ThuisBatterij.nl</span>
+              <span className="text-lg font-medium text-white">ThuisBatterij.nl</span>
             </div>
-            <p className="text-sm text-slate-400 leading-relaxed mb-4">
-              Het platform voor huiseigenaren die slim willen besparen op hun energiekosten na het stoppen van de salderingsregeling.
+            <p className="text-sm text-slate-400 leading-relaxed">
+              Slim besparen op energiekosten na het stoppen van de salderingsregeling.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Informatie</h4>
+            <h4 className="text-white font-medium mb-4">Informatie</h4>
             <ul className="space-y-3 text-sm">
               <li><a href="#probleem" className="hover:text-emerald-400 transition-colors">Salderingsregeling</a></li>
-              <li><a href="#voordelen" className="hover:text-emerald-400 transition-colors">Voordelen thuisbatterij</a></li>
-              <li><a href="#rekenmodule" className="hover:text-emerald-400 transition-colors">Bereken je besparing</a></li>
-              <li><a href="#faq" className="hover:text-emerald-400 transition-colors">Veelgestelde vragen</a></li>
+              <li><a href="#voordelen" className="hover:text-emerald-400 transition-colors">Voordelen</a></li>
+              <li><a href="#rekenmodule" className="hover:text-emerald-400 transition-colors">Berekenen</a></li>
+              <li><a href="#faq" className="hover:text-emerald-400 transition-colors">FAQ</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Subsidies</h4>
+            <h4 className="text-white font-medium mb-4">Subsidies</h4>
             <ul className="space-y-3 text-sm">
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Warmtefonds lening</a></li>
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Btw-teruggave</a></li>
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
+            <h4 className="text-white font-medium mb-4">Contact</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <svg className="w-4 h-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
@@ -51,11 +51,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-500">&copy; {new Date().getFullYear()} ThuisBatterij.nl - Alle rechten voorbehouden</p>
+        <div className="mt-12 pt-8 border-t border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-slate-500">&copy; {new Date().getFullYear()} ThuisBatterij.nl</p>
           <div className="flex gap-6 text-sm text-slate-500">
-            <a href="#" className="hover:text-slate-300 transition-colors">Privacybeleid</a>
-            <a href="#" className="hover:text-slate-300 transition-colors">Algemene voorwaarden</a>
+            <a href="#" className="hover:text-slate-300 transition-colors">Privacy</a>
+            <a href="#" className="hover:text-slate-300 transition-colors">Voorwaarden</a>
           </div>
         </div>
       </div>

@@ -1,59 +1,33 @@
 export default function HowItWorks() {
   const stappen = [
-    {
-      nummer: 1,
-      titel: 'Vul je adres in',
-      beschrijving: 'Postcode en huisnummer. Op basis van je locatie schatten we je opbrengst en zonnestraling.',
-    },
-    {
-      nummer: 2,
-      titel: 'Geef je zonnepanelen op',
-      beschrijving: 'Aantal panelen, jaarproductie en energieleverancier. Als je de gegevens niet weet, schatten wij dit op basis van je adres.',
-    },
-    {
-      nummer: 3,
-      titel: 'Ontvang je offerte',
-      beschrijving: 'Binnen 24 uur ontvang je een vrijblijvende offerte op maat, inclusief Warmtefonds-financiering en btw-teruggave.',
-    },
+    { nummer: '01', titel: 'Vul je adres in', beschrijving: 'Postcode en huisnummer. We schatten je opbrengst op basis van je locatie.' },
+    { nummer: '02', titel: 'Geef je panelen op', beschrijving: 'Aantal panelen en jaarproductie. Wij helpen je als je het niet weet.' },
+    { nummer: '03', titel: 'Ontvang je offerte', beschrijving: 'Binnen 24 uur een vrijblijvende offerte op maat.' },
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-[#f6f9fc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        <div className="max-w-3xl mb-16">
+          <p className="text-xs font-medium text-emerald-600 uppercase tracking-wider mb-3">Hoe het werkt</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#061b31] leading-[1.1] mb-6 tracking-tight">
             Drie stappen naar je offerte
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Binnen een minuut weet je hoeveel je verliest door het stoppen van de saldering
-            en hoeveel een thuisbatterij je kan besparen.
-          </p>
         </div>
 
-        {/* Steps */}
+        {/* Horizontal steps - clean, no cards */}
         <div className="grid md:grid-cols-3 gap-8">
           {stappen.map((stap) => (
-            <div key={stap.nummer} className="relative">
-              <div className="bg-white rounded-3xl p-8 h-full shadow-sm border border-slate-200">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-600 text-white text-xl font-bold rounded-full mb-5">
-                  {stap.nummer}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{stap.titel}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{stap.beschrijving}</p>
-              </div>
-              {stap.nummer < 3 && (
-                <div className="hidden md:flex absolute top-1/2 -right-4 w-8 h-8 bg-emerald-100 rounded-full items-center justify-center text-emerald-600 text-sm font-bold shadow-sm">
-                  →
-                </div>
-              )}
+            <div key={stap.nummer}>
+              <div className="text-emerald-600 font-light text-sm mb-2">{stap.nummer}</div>
+              <h3 className="text-xl font-light text-[#061b31] mb-2">{stap.titel}</h3>
+              <p className="text-sm text-[#64748d]">{stap.beschrijving}</p>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-[#64748d]">
             Gratis • Vrijblijvend • Binnen 24 uur in je mailbox
           </p>
         </div>
