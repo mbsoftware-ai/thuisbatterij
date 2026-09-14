@@ -1,3 +1,5 @@
+import { Illustrations } from './Illustrations'
+
 export default function SolutionSection() {
   const stappen = [
     { titel: 'Overdag', beschrijving: 'Zonnepanelen produceren stroom. Wat je niet direct gebruikt, gaat naar de batterij.' },
@@ -30,6 +32,12 @@ export default function SolutionSection() {
               <p className="text-sm text-[#64748d]">{stap.beschrijving}</p>
             </div>
           ))}
+        </div>
+
+        {/* Battery diagram */}
+        <div className="bg-[#f6f9fc] rounded-sm border border-[#e5edf5] p-8 mb-20 shadow-stripe-sm">
+          <h3 className="text-xl font-light text-[#061b31] text-center mb-6">Zo werkt het in de praktijk</h3>
+          <Illustrations.BatteryDiagram />
         </div>
 
         {/* Benefits - clean list style */}

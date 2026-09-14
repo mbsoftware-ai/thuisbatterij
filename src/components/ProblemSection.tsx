@@ -1,3 +1,5 @@
+import { Illustrations } from './Illustrations'
+
 export default function ProblemSection() {
   return (
     <section id="probleem" className="py-24 bg-[#f6f9fc]">
@@ -12,6 +14,12 @@ export default function ProblemSection() {
             Sinds 2004 bestaat de salderingsregeling. Die komt per 1 januari 2027 te einde. 
             Voor huiseigenaren met zonnepanelen heeft dat grote financiële gevolgen.
           </p>
+        </div>
+
+        {/* Savings chart */}
+        <div className="bg-white rounded-sm border border-[#e5edf5] p-8 mb-16 shadow-stripe-sm">
+          <h3 className="text-xl font-light text-[#061b31] text-center mb-6">Financiële impact</h3>
+          <Illustrations.SavingsChart />
         </div>
 
         {/* Two-column comparison - editorial style, no cards */}
@@ -60,23 +68,20 @@ export default function ProblemSection() {
           </div>
         </div>
 
-        {/* Stats row - clean, no cards */}
+        {/* Stats row - clean */}
         <div className="border-t border-[#e5edf5] pt-12">
           <div className="grid grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-3xl font-light text-[#061b31] mb-1">€800</div>
               <p className="text-sm text-[#64748d]">Minimaal verlies/jaar</p>
-              <p className="text-xs text-[#94a3b8] mt-1">8 panelen</p>
             </div>
             <div>
               <div className="text-3xl font-light text-[#061b31] mb-1">€1.200</div>
               <p className="text-sm text-[#64748d]">Gemiddeld verlies/jaar</p>
-              <p className="text-xs text-[#94a3b8] mt-1">12 panelen</p>
             </div>
             <div>
               <div className="text-3xl font-light text-[#061b31] mb-1">€1.800</div>
               <p className="text-sm text-[#64748d]">Maximaal verlies/jaar</p>
-              <p className="text-xs text-[#94a3b8] mt-1">20 panelen</p>
             </div>
           </div>
           <div className="mt-10 text-center">

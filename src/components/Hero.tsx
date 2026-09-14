@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { Illustrations } from './Illustrations'
 
 export default function Hero() {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
@@ -53,24 +54,18 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <a
-                href="#rekenmodule"
-                className="btn-primary inline-flex items-center justify-center gap-2 text-base"
-              >
+              <a href="#rekenmodule" className="btn-primary inline-flex items-center justify-center gap-2 text-base">
                 Bereken je besparing
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
-              <a
-                href="#probleem"
-                className="btn-secondary inline-flex items-center justify-center gap-2 text-base"
-              >
+              <a href="#probleem" className="btn-secondary inline-flex items-center justify-center gap-2 text-base">
                 Meer informatie
               </a>
             </div>
 
-            {/* Trust signals - minimal, no cards */}
+            {/* Trust signals - minimal */}
             <div className="flex flex-wrap items-center gap-6 justify-center lg:justify-start text-sm text-[#64748d]">
               <div className="flex items-center gap-2">
                 <svg className="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -93,65 +88,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: Stripe-style visual - not a card, just a clean panel */}
+          {/* Right: Custom SVG illustration */}
           <div className="lg:col-span-5">
-            <div className="bg-[#f6f9fc] rounded-sm border border-[#e5edf5] p-8 shadow-stripe-lg">
-              {/* Countdown */}
-              <div className="mb-8">
-                <p className="text-xs font-medium text-[#273951] uppercase tracking-wider mb-4">Tijd tot saldering stopt</p>
-                <div className="grid grid-cols-4 gap-4">
-                  <div className="text-center">
-                    <div className="bg-white rounded-sm border border-[#e5edf5] p-3 mb-1">
-                      <div className="text-2xl font-light text-[#061b31]">{countdown.days}</div>
-                    </div>
-                    <div className="text-xs text-[#64748d]">Dagen</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-white rounded-sm border border-[#e5edf5] p-3 mb-1">
-                      <div className="text-2xl font-light text-[#061b31]">{countdown.hours}</div>
-                    </div>
-                    <div className="text-xs text-[#64748d]">Uur</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-white rounded-sm border border-[#e5edf5] p-3 mb-1">
-                      <div className="text-2xl font-light text-[#061b31]">{countdown.minutes}</div>
-                    </div>
-                    <div className="text-xs text-[#64748d]">Min</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-white rounded-sm border border-[#e5edf5] p-3 mb-1">
-                      <div className="text-2xl font-light text-[#061b31]">{countdown.seconds}</div>
-                    </div>
-                    <div className="text-xs text-[#64748d]">Sec</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Divider */}
-              <div className="border-t border-[#e5edf5] my-6"></div>
-
-              {/* Savings */}
-              <div>
-                <p className="text-xs font-medium text-[#273951] uppercase tracking-wider mb-2">Je jaarlijkse besparing</p>
-                <div className="text-4xl font-light text-[#061b31] mb-1">€1.200</div>
-                <p className="text-sm text-[#64748d]">Gebaseerd op 12 zonnepanelen</p>
-                
-                <div className="mt-6 space-y-3">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-[#64748d]">Warmtefonds lening</span>
-                    <span className="font-medium text-[#061b31]">€6.000</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-[#64748d]">Btw-teruggave</span>
-                    <span className="font-medium text-[#061b31]">€1.260</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-[#64748d]">Netto maandlast</span>
-                    <span className="font-medium text-emerald-600">€33/maand</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Illustrations.HeroScene />
           </div>
         </div>
       </div>
