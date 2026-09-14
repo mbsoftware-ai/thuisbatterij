@@ -44,7 +44,7 @@ const FAQS: FaqItem[] = [
     id: 6,
     categorie: 'Batterij',
     vraag: 'Is een thuisbatterij veilig?',
-    antwoord: 'Ja, LiFePO4-batterijen zijn de veiligste thuisbeschikbare technologie. Ze bevatten geen giftige stoffen, hebben een lage brandrisico en zijn uitgerust met een batterijbeheersysteem dat alles monitort.',
+    antwoord: 'Ja, LiFePO4-batterijen zijn de veiligste thuisbeschikbare technologie. Ze bevatten geen giftige stoffen, hebben een laag brandrisico en zijn uitgerust met een batterijbeheersysteem dat alles monitort.',
   },
   {
     id: 7,
@@ -92,7 +92,7 @@ export default function FaqSection() {
   const filteredFaqs = activeCategorie === 'Alle' ? FAQS : FAQS.filter(f => f.categorie === activeCategorie)
 
   return (
-    <section id="faq" className="py-20 bg-gray-50">
+    <section id="faq" className="py-20 bg-slate-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-12">
