@@ -1,10 +1,4 @@
 export default function SolutionSection() {
-  const stappen = [
-    { titel: 'Overdag', beschrijving: 'Zonnepanelen produceren stroom. Wat je niet direct gebruikt, gaat naar de batterij.' },
-    { titel: 'Opslaan', beschrijving: 'De batterij slaat je overschot op voor gebruik \'s avonds of \'s nachts.' },
-    { titel: 'Gebruiken', beschrijving: 'Gebruik je opgeslagen stroom wanneer de zon onder is.' },
-  ]
-
   return (
     <section id="voordelen" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,27 +13,79 @@ export default function SolutionSection() {
           </p>
         </div>
 
-        {/* Process steps */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {stappen.map((stap, i) => (
-            <div key={i} className="text-center">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-emerald-700 font-medium">{i + 1}</span>
-              </div>
-              <h3 className="text-lg font-medium text-[#061b31] mb-2">{stap.titel}</h3>
-              <p className="text-sm text-[#64748d]">{stap.beschrijving}</p>
-            </div>
-          ))}
+        {/* Main solution image - battery closeup */}
+        <div className="relative rounded-sm overflow-hidden shadow-stripe-xl border border-[#e5edf5] mb-20">
+          <img 
+            src="/battery-closeup.jpg" 
+            alt="Close-up van een moderne thuisbatterij geïnstalleerd in een schakelkast"
+            className="w-full h-[400px] object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div className="absolute bottom-8 left-8 right-8">
+            <p className="text-white text-lg font-medium mb-2">Moderne thuisbatterij</p>
+            <p className="text-white/80 text-sm">Compact, veilig en zorgeloos. Geïnstalleerd binnen één dag.</p>
+          </div>
         </div>
 
-        {/* Energy monitor foto */}
-        <div className="bg-[#f6f9fc] rounded-sm border border-[#e5edf5] p-8 shadow-stripe-sm">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+        {/* Process steps with photos */}
+        <div className="space-y-20">
+          {/* Step 1: Installer */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
+              <div className="text-emerald-600 font-medium text-sm mb-3">Stap 1</div>
+              <h3 className="text-2xl font-light text-[#061b31] mb-4">Professionele installatie</h3>
+              <p className="text-[#64748d] leading-relaxed mb-6">
+                Onze gecertificeerde installateurs plaatsen de batterij snel en vakkundig. 
+                De installatie duurt gemiddeld 4 tot 6 uur en vereist geen bouwvergunning.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3 text-sm text-[#061b31]">
+                  <span className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  Gecertificeerde installateurs
+                </li>
+                <li className="flex items-center gap-3 text-sm text-[#061b31]">
+                  <span className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  Installatie binnen één dag
+                </li>
+                <li className="flex items-center gap-3 text-sm text-[#061b31]">
+                  <span className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  10 jaar garantie
+                </li>
+              </ul>
+            </div>
+            <div className="relative rounded-sm overflow-hidden shadow-stripe-lg border border-[#e5edf5]">
+              <img 
+                src="/installer.jpg" 
+                alt="Gecertificeerde monteur installeert thuisbatterij naast meterkast"
+                className="w-full h-80 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              <div className="absolute bottom-4 left-4">
+                <p className="text-white text-sm font-medium">Professionele montage</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 2: Couple with tablet */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="lg:order-2">
+              <div className="text-emerald-600 font-medium text-sm mb-3">Stap 2</div>
               <h3 className="text-2xl font-light text-[#061b31] mb-4">Volg je energie in real-time</h3>
-              <p className="text-[#64748d] mb-6">
+              <p className="text-[#64748d] leading-relaxed mb-6">
                 Met een smart energy monitor zie je precies hoeveel je opwekt, gebruikt en opslaat. 
-                Besnoeim op elke euro en maximaliseer je besparing.
+                Bespaar op elke euro en maximaliseer je investering.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3 text-sm text-[#061b31]">
@@ -68,17 +114,21 @@ export default function SolutionSection() {
                 </li>
               </ul>
             </div>
-            <div className="flex justify-center">
+            <div className="relative rounded-sm overflow-hidden shadow-stripe-lg border border-[#e5edf5] lg:order-1">
               <img 
-                src="/energy-monitor.jpg" 
-                alt="Smart energy monitor met live data over zonne-energie en batterij"
-                className="rounded-sm shadow-stripe-lg border border-[#e5edf5] max-w-full h-auto"
+                src="/couple-tablet.jpg" 
+                alt="Trotse Nederlandse koppeling bekijkt energiedashboard op tablet in woonkamer"
+                className="w-full h-80 object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              <div className="absolute bottom-4 left-4">
+                <p className="text-white text-sm font-medium">Volg je besparing</p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Benefits */}
+        {/* Benefits summary */}
         <div className="border-t border-[#e5edf5] pt-12">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">

@@ -1,10 +1,7 @@
-import { Illustrations } from './Illustrations'
-
 export default function ProblemSection() {
   return (
     <section id="probleem" className="py-24 bg-[#f6f9fc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Editorial-style header */}
         <div className="max-w-3xl mb-16">
           <p className="text-xs font-medium text-emerald-600 uppercase tracking-wider mb-3">Het probleem</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#061b31] leading-[1.1] mb-6 tracking-tight">
@@ -16,45 +13,49 @@ export default function ProblemSection() {
           </p>
         </div>
 
-        {/* Savings chart */}
-        <div className="bg-white rounded-sm border border-[#e5edf5] p-8 mb-16 shadow-stripe-sm">
-          <h3 className="text-xl font-light text-[#061b31] text-center mb-6">Financiële impact</h3>
-          <Illustrations.SavingsChart />
-        </div>
-
-        {/* Two-column comparison - editorial style, no cards */}
-        <div className="grid lg:grid-cols-2 gap-16 mb-20">
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-emerald-100 rounded-sm flex items-center justify-center">
-                <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14" />
-                </svg>
+        {/* Two-column with photos */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-20">
+          <div className="space-y-6">
+            <div className="relative rounded-sm overflow-hidden shadow-stripe-lg border border-[#e5edf5]">
+              <img 
+                src="/energy-monitor.jpg" 
+                alt="Smart energy monitor toont je energieverbruik en terugleveringen in real-time"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div className="absolute bottom-4 left-4">
+                <p className="text-white text-sm font-medium">Real-time inzicht</p>
+                <p className="text-white/70 text-xs">Zie precies wat je levert en gebruikt</p>
               </div>
-              <h3 className="text-2xl font-light text-[#061b31]">Nu: volledige saldering</h3>
             </div>
-            <p className="text-[#64748d] leading-relaxed mb-6">
+            <h3 className="text-2xl font-light text-[#061b31]">Nu: volledige saldering</h3>
+            <p className="text-[#64748d] leading-relaxed">
               Stroom die je zonnepanelen produceren maar niet direct gebruik, lever je terug aan het net. 
               Die teruggeleverde stroom trek je later weer in zonder dat je extra betaalt.
             </p>
             <div className="bg-white rounded-sm border border-[#e5edf5] p-4">
               <p className="text-sm text-[#273951]">
                 <span className="font-medium">Voorbeeld:</span> Je levert 3.000 kWh terug en 
-                gebruikt 3.000 kWh 's nachts. Je energierekening blijft beperkt tot het vastrecht.
+                gebruikt 3.000 kWh 's nachts. Je rekening blijft beperkt tot het vastrecht.
               </p>
             </div>
           </div>
 
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-red-100 rounded-sm flex items-center justify-center">
-                <svg className="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                </svg>
+          <div className="space-y-6">
+            <div className="relative rounded-sm overflow-hidden shadow-stripe-lg border border-[#e5edf5]">
+              <img 
+                src="/battery-installation.jpg" 
+                alt="Thuisbatterij geïnstalleerd naast meterkast in Nederlandse woning"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div className="absolute bottom-4 left-4">
+                <p className="text-white text-sm font-medium">Energie-onafhankelijk</p>
+                <p className="text-white/70 text-xs">Gebruik je eigen stroom op alle tijden</p>
               </div>
-              <h3 className="text-2xl font-light text-[#061b31]">Na 2027: geen saldering meer</h3>
             </div>
-            <p className="text-[#64748d] leading-relaxed mb-6">
+            <h3 className="text-2xl font-light text-[#061b31]">Na 2027: geen saldering meer</h3>
+            <p className="text-[#64748d] leading-relaxed">
               Teruggeleverde stroom wordt tegen een lage vergoeding afgerekend, terwijl je 
               stroom die je 's nachts van het net haalt volledig moet betalen.
             </p>
@@ -68,7 +69,7 @@ export default function ProblemSection() {
           </div>
         </div>
 
-        {/* Stats row - clean */}
+        {/* Stats */}
         <div className="border-t border-[#e5edf5] pt-12">
           <div className="grid grid-cols-3 gap-8 text-center">
             <div>
