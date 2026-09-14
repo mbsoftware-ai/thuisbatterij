@@ -5,8 +5,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'ThuisBatterij - Bespaar op je energierekening na 2027',
-  description: 'Ontdek hoeveel je verliest door het stoppen van de salderingsregeling en hoe een thuisbatterij je kan besparen.',
+  title: 'ThuisBatterij - Bespaar €1.200 per jaar op je energierekening',
+  description: 'De salderingsregeling stopt per 1 januari 2027. Bereken hoeveel je verliest en hoe een thuisbatterij je bespaart. Gratis offerte, Warmtefonds-financiering en btw-teruggave.',
+  keywords: ['thuisbatterij', 'saldering', 'salderingsregeling', 'zonnepanelen', 'energiebesparing', 'warmtefonds'],
 }
 
 export default function RootLayout({
