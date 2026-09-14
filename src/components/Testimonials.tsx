@@ -21,23 +21,23 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          <div className="text-center p-6 bg-slate-50 rounded-2xl">
+          <div className="text-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200">
             <div className="text-3xl font-bold text-emerald-700 mb-1">2.847</div>
             <p className="text-sm text-gray-600">Geplaatste batterijen</p>
           </div>
-          <div className="text-center p-6 bg-slate-50 rounded-2xl">
+          <div className="text-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200">
             <div className="text-3xl font-bold text-emerald-700 mb-1">4.8/5</div>
             <p className="text-sm text-gray-600">Klanttevredenheid</p>
           </div>
-          <div className="text-center p-6 bg-slate-50 rounded-2xl">
+          <div className="text-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200">
             <div className="text-3xl font-bold text-emerald-700 mb-1">€1.150</div>
             <p className="text-sm text-gray-600">Gemiddelde besparing/jaar</p>
           </div>
-          <div className="text-center p-6 bg-slate-50 rounded-2xl">
+          <div className="text-center p-6 bg-white rounded-2xl shadow-sm border border-slate-200">
             <div className="text-3xl font-bold text-emerald-700 mb-1">6 jaar</div>
             <p className="text-sm text-gray-600">Terugverdiend</p>
           </div>
@@ -52,7 +52,7 @@ export default function Testimonials() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+            <div key={i} className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
               <div className="flex items-center gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, j) => (
                   <svg key={j} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">

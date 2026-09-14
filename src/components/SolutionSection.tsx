@@ -45,29 +45,32 @@ export default function SolutionSection() {
           {voordelen.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:shadow-lg hover:border-emerald-200 transition-all duration-300"
+              className="group bg-white rounded-3xl p-8 shadow-sm border border-slate-200 hover:shadow-xl hover:border-emerald-200 transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-5">
-                <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl flex items-center justify-center text-emerald-600 mb-5 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                  <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{item.titel}</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{item.titel}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{item.beschrijving}</p>
             </div>
           ))}
         </div>
 
         {/* How it works visual */}
-        <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
-          <div className="p-8 md:p-12">
-            <h3 className="text-2xl font-bold text-gray-900 text-center mb-10">
+        <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+          <div className="p-10 md:p-12">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-12">
               Zo werkt het in de praktijk
             </h3>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-10">
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-amber-100 rounded-2xl flex items-center justify-center">
-                  <span className="text-3xl">☀️</span>
+                <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl flex items-center justify-center shadow-lg shadow-amber-100/50">
+                  <svg className="w-12 h-12 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                    <circle cx="12" cy="12" r="5" />
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                  </svg>
                 </div>
                 <h4 className="font-bold text-gray-900 mb-2">Overdag</h4>
                 <p className="text-sm text-gray-600">
@@ -75,8 +78,12 @@ export default function SolutionSection() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-emerald-100 rounded-2xl flex items-center justify-center">
-                  <span className="text-3xl">🔋</span>
+                <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl flex items-center justify-center shadow-lg shadow-emerald-100/50">
+                  <svg className="w-12 h-12 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                    <rect x="2" y="7" width="18" height="10" rx="2" />
+                    <path d="M22 11v2" />
+                    <path d="M6 11v2M10 11v2M14 11v2" />
+                  </svg>
                 </div>
                 <h4 className="font-bold text-gray-900 mb-2">Opslaan</h4>
                 <p className="text-sm text-gray-600">
@@ -84,8 +91,10 @@ export default function SolutionSection() {
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-indigo-100 rounded-2xl flex items-center justify-center">
-                  <span className="text-3xl">🌙</span>
+                <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-3xl flex items-center justify-center shadow-lg shadow-indigo-100/50">
+                  <svg className="w-12 h-12 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                  </svg>
                 </div>
                 <h4 className="font-bold text-gray-900 mb-2">'s Avonds & 's nachts</h4>
                 <p className="text-sm text-gray-600">

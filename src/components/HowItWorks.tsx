@@ -18,7 +18,7 @@ export default function HowItWorks() {
   ]
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
@@ -35,15 +35,15 @@ export default function HowItWorks() {
         <div className="grid md:grid-cols-3 gap-8">
           {stappen.map((stap) => (
             <div key={stap.nummer} className="relative">
-              <div className="bg-white rounded-2xl p-8 h-full shadow-sm border border-slate-200">
-                <div className="inline-flex items-center justify-center w-10 h-10 bg-emerald-600 text-white text-lg font-bold rounded-full mb-4">
+              <div className="bg-white rounded-3xl p-8 h-full shadow-sm border border-slate-200">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-600 text-white text-xl font-bold rounded-full mb-5">
                   {stap.nummer}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{stap.titel}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{stap.titel}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{stap.beschrijving}</p>
               </div>
               {stap.nummer < 3 && (
-                <div className="hidden md:block absolute top-1/2 -right-4 w-8 text-emerald-300 text-2xl font-light">
+                <div className="hidden md:flex absolute top-1/2 -right-4 w-8 h-8 bg-emerald-100 rounded-full items-center justify-center text-emerald-600 text-sm font-bold shadow-sm">
                   →
                 </div>
               )}
