@@ -121,7 +121,7 @@ export async function POST(request: NextRequest) {
     
     const pdfBuffer = await pdfPromise
     
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(new Uint8Array(pdfBuffer), {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `attachment; filename=offerte-${lead_id?.slice(0, 8) || 'xxxx'}.pdf`,
