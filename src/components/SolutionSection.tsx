@@ -1,5 +1,3 @@
-import { Illustrations } from './Illustrations'
-
 export default function SolutionSection() {
   const stappen = [
     { titel: 'Overdag', beschrijving: 'Zonnepanelen produceren stroom. Wat je niet direct gebruikt, gaat naar de batterij.' },
@@ -21,7 +19,7 @@ export default function SolutionSection() {
           </p>
         </div>
 
-        {/* Process steps - horizontal, no cards */}
+        {/* Process steps */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {stappen.map((stap, i) => (
             <div key={i} className="text-center">
@@ -34,13 +32,53 @@ export default function SolutionSection() {
           ))}
         </div>
 
-        {/* Battery diagram */}
-        <div className="bg-[#f6f9fc] rounded-sm border border-[#e5edf5] p-8 mb-20 shadow-stripe-sm">
-          <h3 className="text-xl font-light text-[#061b31] text-center mb-6">Zo werkt het in de praktijk</h3>
-          <Illustrations.BatteryDiagram />
+        {/* Energy monitor foto */}
+        <div className="bg-[#f6f9fc] rounded-sm border border-[#e5edf5] p-8 shadow-stripe-sm">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-light text-[#061b31] mb-4">Volg je energie in real-time</h3>
+              <p className="text-[#64748d] mb-6">
+                Met een smart energy monitor zie je precies hoeveel je opwekt, gebruikt en opslaat. 
+                Besnoeim op elke euro en maximaliseer je besparing.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3 text-sm text-[#061b31]">
+                  <span className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  Live inzicht in productie en verbruik
+                </li>
+                <li className="flex items-center gap-3 text-sm text-[#061b31]">
+                  <span className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  Automatische laadoptimalisatie
+                </li>
+                <li className="flex items-center gap-3 text-sm text-[#061b31]">
+                  <span className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  Geschiedenis en rapportages
+                </li>
+              </ul>
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="/energy-monitor.jpg" 
+                alt="Smart energy monitor met live data over zonne-energie en batterij"
+                className="rounded-sm shadow-stripe-lg border border-[#e5edf5] max-w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* Benefits - clean list style */}
+        {/* Benefits */}
         <div className="border-t border-[#e5edf5] pt-12">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
@@ -50,7 +88,7 @@ export default function SolutionSection() {
                 </svg>
                 <div>
                   <h4 className="font-medium text-[#061b31] mb-1">Direct besparen</h4>
-                  <p className="text-sm text-[#64748d]">Bespaar €800 tot €1.800 per jaar doordat je zelf je opgewekte stroom gebruikt.</p>
+                  <p className="text-sm text-[#64748d]">Bespaar €800 tot €1.800 per jaar.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -59,7 +97,7 @@ export default function SolutionSection() {
                 </svg>
                 <div>
                   <h4 className="font-medium text-[#061b31] mb-1">0% financiering</h4>
-                  <p className="text-sm text-[#64748d]">Via het Warmtefonds kun je tot €8.500 lenen tegen 0% rente.</p>
+                  <p className="text-sm text-[#64748d]">Via het Warmtefonds tot €8.500.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -68,7 +106,7 @@ export default function SolutionSection() {
                 </svg>
                 <div>
                   <h4 className="font-medium text-[#061b31] mb-1">Btw-teruggave</h4>
-                  <p className="text-sm text-[#64748d]">Je kunt 21% btw terugvragen op de aanschaf en installatie.</p>
+                  <p className="text-sm text-[#64748d]">21% terug op aanschaf en installatie.</p>
                 </div>
               </div>
             </div>
@@ -79,7 +117,7 @@ export default function SolutionSection() {
                 </svg>
                 <div>
                   <h4 className="font-medium text-[#061b31] mb-1">10 jaar garantie</h4>
-                  <p className="text-sm text-[#64748d]">LiFePO4-batterijen hebben een levensduur van 10 tot 15 jaar.</p>
+                  <p className="text-sm text-[#64748d]">Levensduur van 10-15 jaar.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -88,7 +126,7 @@ export default function SolutionSection() {
                 </svg>
                 <div>
                   <h4 className="font-medium text-[#061b31] mb-1">Snel gerealiseerd</h4>
-                  <p className="text-sm text-[#64748d]">Een erkende installateur plaatst de batterij binnen één dag.</p>
+                  <p className="text-sm text-[#64748d]">Installatie binnen één dag.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -97,7 +135,7 @@ export default function SolutionSection() {
                 </svg>
                 <div>
                   <h4 className="font-medium text-[#061b31] mb-1">Meer onafhankelijkheid</h4>
-                  <p className="text-sm text-[#64748d]">Minder afhankelijk van stijgende energieprijzen.</p>
+                  <p className="text-sm text-[#64748d]">Minder afhankelijk van energieprijzen.</p>
                 </div>
               </div>
             </div>
