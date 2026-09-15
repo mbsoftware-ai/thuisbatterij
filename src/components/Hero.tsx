@@ -33,8 +33,9 @@ export default function Hero() {
           alt="Moderne Nederlandse woning met zonnepanelen op het dak"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/60 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+        {/* Stronger gradient - covers more area */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-slate-900/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
         
         {/* Content overlay */}
         <div className="absolute inset-0 flex items-center">
@@ -52,7 +53,7 @@ export default function Hero() {
                 </span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-white/90 leading-relaxed mb-8 max-w-xl">
+              <p className="text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-xl">
                 Per 1 januari 2027 wordt de salderingsregeling afgeschaft. Een thuisbatterij 
                 bespaart je <span className="font-semibold text-emerald-400">€800 tot €1.800 per jaar</span>.
               </p>
@@ -76,7 +77,7 @@ export default function Hero() {
       {/* Trust bar */}
       <div className="bg-[#061b31] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-white/80">
+          <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-white">
             <div className="flex items-center gap-2">
               <svg className="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -100,7 +101,7 @@ export default function Hero() {
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 6v6l4 2" />
               </svg>
-              <span>Nog <strong className="text-white">{countdown.days} dagen</strong></span>
+              <span>Nog <strong>{countdown.days} dagen</strong></span>
             </div>
           </div>
         </div>
