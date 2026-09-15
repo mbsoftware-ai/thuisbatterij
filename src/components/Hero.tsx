@@ -26,21 +26,21 @@ export default function Hero() {
 
   return (
     <section className="relative bg-white overflow-hidden">
-      {/* Large hero image - full width */}
-      <div className="relative h-[70vh] min-h-[500px]">
+      {/* Hero image - full width */}
+      <div className="relative h-[75vh] min-h-[550px]">
         <img 
-          src="/aerial-solar.jpg" 
-          alt="Overzicht van Nederlandse wijk met zonnepanelen op alle daken"
+          src="/solar-panels.jpg" 
+          alt="Moderne Nederlandse woning met zonnepanelen op het dak"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/60 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
         
         {/* Content overlay */}
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 bg-emerald-500/90 text-white text-sm font-semibold px-4 py-2 rounded-sm mb-6 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 bg-emerald-500 text-white text-sm font-semibold px-4 py-2 rounded-sm mb-6">
                 <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                 Salderingsregeling stopt 1 januari 2027
               </div>

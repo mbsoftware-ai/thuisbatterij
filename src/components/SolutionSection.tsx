@@ -29,7 +29,7 @@ export default function SolutionSection() {
             </div>
           </div>
 
-          {/* Right - Battery photo with floating elements */}
+          {/* Right - Battery photo */}
           <div className="lg:col-span-6 relative">
             <div className="relative">
               <div className="absolute -top-8 -right-8 w-32 h-32 bg-emerald-200 rounded-full opacity-20 blur-2xl"></div>
@@ -50,7 +50,7 @@ export default function SolutionSection() {
           </div>
         </div>
 
-        {/* Three photos in a row - editorial style */}
+        {/* Three photos - editorial grid */}
         <div className="grid md:grid-cols-3 gap-6">
           <div className="relative rounded-sm overflow-hidden shadow-stripe-lg border border-[#e5edf5] group">
             <img 

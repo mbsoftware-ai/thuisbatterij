@@ -1,24 +1,21 @@
 export default function ProblemSection() {
   return (
     <section id="probleem" className="py-24 bg-white relative overflow-hidden">
-      {/* Decorative background shape */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-red-50 to-transparent -skew-x-12 transform origin-top-right"></div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          {/* Left - Photo composition */}
+          {/* Left - Photo with floating element */}
           <div className="lg:col-span-5 relative">
             <div className="relative">
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-emerald-100 rounded-full opacity-60"></div>
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-red-50 rounded-full opacity-60 blur-2xl"></div>
               <div className="relative rounded-sm overflow-hidden shadow-stripe-xl border border-[#e5edf5]">
                 <img 
-                  src="/solar-panels.jpg" 
-                  alt="Zonnepanelen op een Nederlands dak"
+                  src="/aerial-solar.jpg" 
+                  alt="Overzicht van Nederlandse wijk met zonnepanelen"
                   className="w-full h-80 object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-sm shadow-stripe-lg border border-[#e5edf5] p-4 max-w-xs">
-                <p className="text-xs text-[#64748d]">Terugleververgoeding</p>
+              <div className="absolute -bottom-4 -right-4 bg-white rounded-sm shadow-stripe-lg border border-[#e5edf5] p-4">
+                <p className="text-xs text-[#64748d] mb-1">Gemiddeld verlies</p>
                 <p className="text-2xl font-light text-red-600">-€1.200/jaar</p>
               </div>
             </div>
@@ -35,7 +32,7 @@ export default function ProblemSection() {
               Voor huiseigenaren met zonnepanelen heeft dat grote financiële gevolgen.
             </p>
 
-            {/* Comparison */}
+            {/* Comparison boxes */}
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="bg-emerald-50 rounded-sm p-6 border border-emerald-100">
                 <div className="flex items-center gap-2 mb-3">
