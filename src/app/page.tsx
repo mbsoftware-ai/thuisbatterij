@@ -6,6 +6,7 @@ import HowItWorks from '@/components/HowItWorks'
 import Calculator from '@/components/Calculator'
 import Testimonials from '@/components/Testimonials'
 import FaqSection from '@/components/FaqSection'
+import CtaSection from '@/components/CtaSection'
 import Footer from '@/components/Footer'
 
 export default function HomePage() {
@@ -20,6 +21,7 @@ export default function HomePage() {
         <Calculator />
         <Testimonials />
         <FaqSection />
+        <CtaSection />
       </main>
       <Footer />
     </>

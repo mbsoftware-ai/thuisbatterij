@@ -1,30 +1,31 @@
 export default function SolutionSection() {
   return (
-    <section id="voordelen" className="py-24 bg-[#f6f9fc] relative overflow-hidden">
+    <section id="voordelen" className="py-24 bg-[#1c1e54] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-100 rounded-full -translate-x-1/2 translate-y-1/2 opacity-40 blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-900/20 to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 items-center mb-20">
           {/* Left - Content */}
           <div className="lg:col-span-6">
-            <p className="text-xs font-medium text-emerald-600 uppercase tracking-wider mb-3">De oplossing</p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#061b31] leading-[1.1] mb-6 tracking-tight">
+            <p className="text-xs font-medium text-emerald-400 uppercase tracking-wider mb-3">De oplossing</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-[1.1] mb-6 tracking-tight">
               Een thuisbatterij slaat je energie op
             </h2>
-            <p className="text-lg text-[#64748d] leading-relaxed mb-8">
+            <p className="text-lg text-slate-300 leading-relaxed mb-8">
               Geen stroom meer verspillen aan het net. Gebruik je eigen zonne-energie 
               wanneer je hem nodig hebt.
             </p>
 
             {/* Battery visual */}
-            <div className="bg-white rounded-sm p-6 shadow-stripe-sm border border-[#e5edf5] inline-flex items-center gap-4">
-              <div className="w-16 h-16 bg-emerald-50 rounded-sm flex items-center justify-center">
-                <span className="text-3xl font-light text-emerald-600">85%</span>
+            <div className="bg-white/5 backdrop-blur-sm rounded-sm p-6 border border-white/10 inline-flex items-center gap-4">
+              <div className="w-16 h-16 bg-emerald-500/20 rounded-sm flex items-center justify-center">
+                <span className="text-3xl font-light text-emerald-400">85%</span>
               </div>
               <div>
-                <p className="text-xs text-[#64748d] uppercase tracking-wider">Batterij niveau</p>
-                <p className="text-lg font-medium text-[#061b31]">Genoeg voor vanavond</p>
+                <p className="text-xs text-slate-400 uppercase tracking-wider">Batterij niveau</p>
+                <p className="text-lg font-medium text-white">Genoeg voor vanavond</p>
               </div>
             </div>
           </div>
@@ -32,8 +33,8 @@ export default function SolutionSection() {
           {/* Right - Battery photo */}
           <div className="lg:col-span-6 relative">
             <div className="relative">
-              <div className="absolute -top-8 -right-8 w-32 h-32 bg-emerald-200 rounded-full opacity-20 blur-2xl"></div>
-              <div className="relative rounded-sm overflow-hidden shadow-stripe-xl border border-[#e5edf5]">
+              <div className="absolute -top-8 -right-8 w-32 h-32 bg-emerald-500/30 rounded-full blur-2xl"></div>
+              <div className="relative rounded-sm overflow-hidden shadow-2xl border border-white/10">
                 <img 
                   src="/battery-hero.jpg" 
                   alt="Moderne thuisbatterij wit keurmerk"
@@ -52,7 +53,7 @@ export default function SolutionSection() {
 
         {/* Three photos - editorial grid */}
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="relative rounded-sm overflow-hidden shadow-stripe-lg border border-[#e5edf5] group">
+          <div className="relative rounded-sm overflow-hidden shadow-2xl border border-white/10 group">
             <img 
               src="/installer.jpg" 
               alt="Gecertificeerde monteur installeert batterij"
@@ -65,7 +66,7 @@ export default function SolutionSection() {
             </div>
           </div>
 
-          <div className="relative rounded-sm overflow-hidden shadow-stripe-lg border border-[#e5edf5] group">
+          <div className="relative rounded-sm overflow-hidden shadow-2xl border border-white/10 group">
             <img 
               src="/couple.jpg" 
               alt="Koppeling bekijkt energie dashboard op tablet"
@@ -78,7 +79,7 @@ export default function SolutionSection() {
             </div>
           </div>
 
-          <div className="relative rounded-sm overflow-hidden shadow-stripe-lg border border-[#e5edf5] group">
+          <div className="relative rounded-sm overflow-hidden shadow-2xl border border-white/10 group">
             <img 
               src="/solar-panels.jpg" 
               alt="Zonnepanelen op Nederlands dak"
@@ -103,14 +104,14 @@ export default function SolutionSection() {
             { titel: 'Onafhankelijk', desc: 'Minder prijsgevoelig' },
           ].map((item, i) => (
             <div key={i} className="flex items-start gap-4">
-              <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <div className="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg className="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
               <div>
-                <h4 className="font-medium text-[#061b31] mb-1">{item.titel}</h4>
-                <p className="text-sm text-[#64748d]">{item.desc}</p>
+                <h4 className="font-medium text-white mb-1">{item.titel}</h4>
+                <p className="text-sm text-slate-400">{item.desc}</p>
               </div>
             </div>
           ))}

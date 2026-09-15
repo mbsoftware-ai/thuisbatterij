@@ -3,38 +3,36 @@
 import { useState } from 'react'
 
 const FAQS = [
-  { id: 1, cat: 'Saldering', vraag: 'Wat is de salderingsregeling?', antwoord: 'De salderingsregeling bestaat sinds 2004 en stelt huiseigenaren in staat om teruggeleverde stroom later weer in te zonder extra te betalen.' },
-  { id: 2, cat: 'Saldering', vraag: 'Wanneer stopt de salderingsregeling?', antwoord: 'Per 1 januari 2027 wordt de salderingsregeling afgeschaft.' },
-  { id: 3, cat: 'Saldering', vraag: 'Wat gebeurt er na 2027?', antwoord: 'Teruggeleverde stroom wordt tegen ~€0,06/kWh afgerekend, terwijl je €0,35/kWh betaalt voor stroom van het net.' },
-  { id: 4, cat: 'Batterij', vraag: 'Welke capaciteit heb ik nodig?', antwoord: 'Voor een gemiddeld huishouden is 10 kWh voldoende. Grotere systemen (15 kWh) voor meer dan 16 panelen.' },
-  { id: 5, cat: 'Batterij', vraag: 'Hoe lang gaat een batterij mee?', antwoord: 'LiFePO4-batterijen hebben een levensduur van 10-15 jaar en 6.000 laadcycli.' },
-  { id: 6, cat: 'Batterij', vraag: 'Is een batterij veilig?', antwoord: 'Ja, LiFePO4 is de veiligste thuistechnologie met een laag brandrisico.' },
-  { id: 7, cat: 'Subsidie', vraag: 'Wat krijg ik via het Warmtefonds?', antwoord: 'Een lening tot €8.500 tegen 0% rente met een looptijd van 10-15 jaar.' },
-  { id: 8, cat: 'Subsidie', vraag: 'Kan ik btw terugvragen?', antwoord: 'Ja, 21% btw terug op aanschaf en installatie, tot ~€1.300.' },
-  { id: 9, cat: 'Installatie', vraag: 'Hoe duurt de installatie?', antwoord: 'Gemiddeld 4-6 uur. Eén dag is voldoende.' },
-  { id: 10, cat: 'Installatie', vraag: 'Heb ik een vergunning nodig?', antwoord: 'Nee, een thuisbatterij vereist geen bouwvergunning.' },
+  { id: 1, vraag: 'Wat is de salderingsregeling?', antwoord: 'De salderingsregeling bestaat sinds 2004 en stelt huiseigenaren in staat om teruggeleverde stroom later weer in te zonder extra te betalen.' },
+  { id: 2, vraag: 'Wanneer stopt de salderingsregeling?', antwoord: 'Per 1 januari 2027 wordt de salderingsregeling afgeschaft.' },
+  { id: 3, vraag: 'Wat gebeurt er na 2027?', antwoord: 'Teruggeleverde stroom wordt tegen ~€0,06/kWh afgerekend, terwijl je €0,35/kWh betaalt voor stroom van het net.' },
+  { id: 4, vraag: 'Welke capaciteit heb ik nodig?', antwoord: 'Voor een gemiddeld huishouden is 10 kWh voldoende. Grotere systemen (15 kWh) voor meer dan 16 panelen.' },
+  { id: 5, vraag: 'Hoe lang gaat een batterij mee?', antwoord: 'LiFePO4-batterijen hebben een levensduur van 10-15 jaar en 6.000 laadcycli.' },
+  { id: 6, vraag: 'Is een batterij veilig?', antwoord: 'Ja, LiFePO4 is de veiligste thuistechnologie met een laag brandrisico.' },
+  { id: 7, vraag: 'Wat krijg ik via het Warmtefonds?', antwoord: 'Een lening tot €8.500 tegen 0% rente met een looptijd van 10-15 jaar.' },
+  { id: 8, vraag: 'Kan ik btw terugvragen?', antwoord: 'Ja, 21% btw terug op aanschaf en installatie, tot ~€1.300.' },
 ]
 
 export default function FaqSection() {
   const [openId, setOpenId] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="py-24 bg-[#f6f9fc]">
+    <section id="faq" className="py-24 bg-[#061b31]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-light text-[#061b31] tracking-tight">Veelgestelde vragen</h2>
+          <h2 className="text-3xl sm:text-4xl font-light text-white tracking-tight">Veelgestelde vragen</h2>
         </div>
 
         <div className="space-y-2">
           {FAQS.map(item => (
-            <div key={item.id} className="bg-white rounded-sm border border-[#e5edf5] overflow-hidden">
+            <div key={item.id} className="bg-white/5 rounded-sm border border-white/10 overflow-hidden">
               <button onClick={() => setOpenId(openId === item.id ? null : item.id)} className="w-full flex items-center justify-between px-6 py-4 text-left">
-                <span className="font-medium text-[#061b31] text-sm">{item.vraag}</span>
-                <svg className={`w-4 h-4 text-[#64748d] transition-transform ${openId === item.id ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                <span className="font-medium text-white text-sm">{item.vraag}</span>
+                <svg className={`w-4 h-4 text-slate-400 transition-transform ${openId === item.id ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
               </button>
               {openId === item.id && (
                 <div className="px-6 pb-4">
-                  <p className="text-[#64748d] text-sm">{item.antwoord}</p>
+                  <p className="text-slate-400 text-sm">{item.antwoord}</p>
                 </div>
               )}
             </div>
